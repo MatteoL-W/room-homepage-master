@@ -36,7 +36,7 @@ leftArrow.addEventListener('click', () => {
 
 rightArrow.addEventListener('click', () => {
     number = number + 1;
-    if (number == 3) {
+    if (number == 4) {
         number = 0;
     }
     actualiserDiapo(number);
