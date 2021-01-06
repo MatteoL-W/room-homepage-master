@@ -1,0 +1,234 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+}
+
+.room__hero {
+  height: 600px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+}
+
+.room__hero-illustration {
+  transition: ease-in-out 0.3s;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.room__hero-menu {
+  margin: 40px;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.room__hero-menu > a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 7px;
+}
+.room__hero-menu > a::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: calc(50% - 10px);
+  bottom: 0;
+  width: 20px;
+  height: 2px;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+}
+.room__hero-menu > a:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.room__hero-about {
+  position: relative;
+  padding: 100px 50px;
+}
+
+.room__hero-title {
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.room__hero-paragraph {
+  color: #969696;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.room__hero-linkshop {
+  display: block;
+  margin-top: 40px;
+  color: black;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+.room__hero-linkshop:hover {
+  color: #969696;
+}
+
+.room__hero-slider {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.room__hero-sliderblock {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+}
+
+.room__hero-sliderblock:hover {
+  background-color: #444444;
+}
+
+.room__about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100vh - 600px);
+}
+
+.room__about-desk {
+  background-image: url("../images/image-about-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.room__about-text {
+  padding: 70px 50px;
+  color: #969696;
+  line-height: 1.5;
+}
+
+.room__about-textbold {
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: black;
+}
+
+.room__about-chair {
+  background-image: url("../images/image-about-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#room__hero-menu-responsive {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: white;
+}
+#room__hero-menu-responsive > a {
+  color: black;
+  text-decoration: none;
+}
+
+#responsive_menu {
+  display: none;
+  position: relative;
+  z-index: 1;
+  height: 110px;
+}
+
+#black_overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+@media (max-width: 400px) {
+  .room__hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .room__hero-illustration {
+    height: 360px;
+  }
+
+  .room__hero-slider {
+    top: -60px;
+    right: 0%;
+  }
+
+  .room__hero-title {
+    font-size: 2rem;
+  }
+
+  .room__hero-sliderblock {
+    width: 60px;
+    height: 60px;
+  }
+
+  .room__hero-menu {
+    display: none;
+  }
+
+  .room__about {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .room__about-desk {
+    height: 238px;
+  }
+
+  .room__about-chair {
+    height: 238px;
+  }
+
+  #responsive_menu {
+    display: block;
+  }
+  #responsive_menu > img.logo {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 31px);
+  }
+  #responsive_menu > img#hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  #room__hero-menu-responsive {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
